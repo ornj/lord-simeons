@@ -1,0 +1,21 @@
+{
+  "name": "lord-simeon",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-watch": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributors": [
+    "Stephen Hurwitz <steve@stevehurwitz.com> https://github.com/ornj",
+    "Alex Milstead",
+    "Jeffrey Starker"
+  ],
+  "license": "HODOR"
+}

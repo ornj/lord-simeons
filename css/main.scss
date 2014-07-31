@@ -1,0 +1,17 @@
+@import '../vendor/normalize.scss/_normalize.scss';
+
+body {
+    background: url('/img/giphy.gif') 0 0;
+}
+
+h1 {
+    color: #fff;
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    font-size: 5.9vw;
+    font-variant: small-caps;
+    position: absolute;
+        bottom: 1em;
+        left: 1em;
+    text-shadow: 0px 0px 10px #000;
+    transform: rotate(-2deg);
+}

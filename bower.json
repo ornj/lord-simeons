@@ -1,0 +1,27 @@
+{
+  "name": "lord-simeons",
+  "version": "0.0.0",
+  "authors": [
+    "Stephen Hurwitz <steve@stevehurwitz.com> https://github.com/ornj",
+    "Alex Milstead",
+    "Jeffrey Starker"
+  ],
+  "description": "Blast loaded old english style burritos",
+  "main": "index.html",
+  "keywords": [
+    "burrito"
+  ],
+  "license": "HODOR",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.scss": "~2.2.0+normalize.2.1.3"
+  }
+}
