@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: Home
 ---
 <section class="menu">
@@ -12,3 +13,36 @@ title: Home
     {% endfor %}
     </dl>
 </section>
+=======
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lord Simeon's World of Cylindrical Sandwiches</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="content">
+        <h1>
+            <i class="under-construction"></i>
+            Lord Simeon's World of Cylindrical Sandwiches
+        </h1>
+        <section class="menu">
+            <p>Our menu is always rotating. Check back regularly for new additions, specials, and coupons!</p>
+            <dl>
+                {% for burrito_hash in site.data.burritos %}
+                {% assign burrito = burrito_hash[1] %}
+                <dt>{{ burrito.name }}<span class="price">{{ burrito.price }}</span></dt>
+                <dd>
+                    {{ burrito.description }}
+                </dd>
+                {% endfor %}
+
+            </dl>
+        </section>
+    </div>
+</body>
+</html>
+>>>>>>> 8f37e4de25d4cdfe7af4617e06ccd8b01abc626d
