@@ -1,20 +1,28 @@
-@import "compass/css3/border-radius";
+@import 'compass/css3/border-radius';
 @import 'compass/css3/filter';
+
 @import '../vendor/normalize.scss/_normalize.scss';
+
+@import '_media-queries';
 
 body {
     background: url('/img/giphy.gif') 0 0;
+    font: 16px/18px sans-serif;
+    width: 100%;
 }
 
 h1 {
     color: #fff;
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-    font-size: 5.9vw;
     font-variant: small-caps;
     line-height: 1;
     text-align: center;
     text-shadow: 0px 0px 1em #000;
     transform: rotate(-2deg);
+
+    @include media(large) {
+        font-size: 5.9vw;
+    }
 }
 
 dt {
@@ -26,8 +34,12 @@ dd {
 }
 
 .content {
-    margin: 2em auto;
-    width: 80vw;
+    margin: 1em auto;
+
+    @include media(large) {
+        margin: 2em auto;
+        width: 80vw;
+    }
 }
 
 .under-construction {
@@ -39,12 +51,15 @@ dd {
 }
 
 .menu {
-    background: #fff url('../img/tortilla-background.jpg');
+    background: #fff url('/img/tortilla-background.jpg');
     line-height: 1.25;
-    padding: 2em;
+    padding: 1em;
 
-    @include border-radius(0.5em);
-    @include filter(drop-shadow(0 0 1em rgba(0, 0, 0, 1)))
+    @include media(large) {
+        padding: 2em;
+        @include border-radius(0.5em);
+        @include filter(drop-shadow(0 0 1em rgba(0, 0, 0, 1)));
+    }
 }
 
 .price {
