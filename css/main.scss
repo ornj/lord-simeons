@@ -71,28 +71,41 @@ dd {
 
 .nav-item {
     display: inline-block;
+    font-size: 0;
 
     a {
         &:link, &:visited {
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px solid #ccc;
-            color: #000;
-            display: block;
-            padding: 0.5em 1em;
-            text-decoration: none;
-
-            @include border-radius(0.25em);
-            @include filter(drop-shadow(0 0 0.25em rgba(0, 0, 0, 0.1)));
-        }
-        &:hover, &:active {
-            background: #fff;
-            @include filter(drop-shadow(0 0 0.25em rgba(0, 0, 0, 0.25)));
-        }
-
-        &.current {
-            background: #428bca;
+            background: url('/img/bean-bg-middle.png') 0 0 repeat-x;
             color: #fff;
+            display: inline-block;
+            font-size: 16px;
+            height: 41px;
+            line-height: 2.5;
+            text-decoration: none;
+            vertical-align: middle;
         }
+    }
+
+    &:before {
+        background: url('/img/bean-bg-left.png') 0 0 no-repeat;
+        display: inline-block;
+        content: '.';
+        height: 41px;
+        width: 42px;
+        vertical-align: middle;
+    }
+
+    &:after {
+        background: url('/img/bean-bg-right.png') 0 0 no-repeat;
+        display: inline-block;
+        content: '.';
+        height: 41px;
+        width: 38px;
+        vertical-align: middle;
+    }
+
+    &.current {
+        @include filter(drop-shadow(0 0 10px #3F9B30));
     }
 }
 
