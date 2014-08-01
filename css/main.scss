@@ -1,8 +1,9 @@
+@import "compass/css3/border-radius";
 @import 'compass/css3/filter';
 @import '../vendor/normalize.scss/_normalize.scss';
 
 body {
-    background: url('img/giphy.gif') 0 0;
+    background: url('/img/giphy.gif') 0 0;
 }
 
 h1 {
@@ -10,19 +11,48 @@ h1 {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size: 5.9vw;
     font-variant: small-caps;
-    position: absolute;
-        bottom: 1em;
-        left: 1em;
+    line-height: 1;
+    text-align: center;
     text-shadow: 0px 0px 1em #000;
     transform: rotate(-2deg);
 }
 
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 1em 1em;
+}
+
+.content {
+    margin: 2em auto;
+    width: 80vw;
+}
+
 .under-construction {
-    background: url('img/ucon.png') 0 0 no-repeat;
+    background: url('/img/ucon.png') 0 0 no-repeat;
     display: block;
-    margin: 0 0 0.5em 0;;
+    margin: 0 auto 0.5em;
     height: 169px;
     width: 206px;
+}
 
+.menu {
+    background: #fff url('../img/tortilla-background.jpg');
+    line-height: 1.25;
+    padding: 2em;
+
+    @include border-radius(0.5em);
     @include filter(drop-shadow(0 0 1em rgba(0, 0, 0, 1)))
+}
+
+.price {
+    &:before {
+        content: ': ';
+    }
+    color: #333;
+    font-weight: normal;
+    font-size: 0.75em;
+    font-style: italic;;
 }
