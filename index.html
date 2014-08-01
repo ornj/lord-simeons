@@ -3,7 +3,7 @@ layout: default
 title: Menu
 ---
 <section class="menu">
-    <p>Our menu is always rotating. Check back regularly for new additions, specials, and coupons!</p>
+    <p>Our menu is always rotating. Check back regularly for new additions, specials, and coupons or sign up for our free <a href="/mailinglist">mailing list!</a></p>
     <dl>
     {% for burrito_hash in site.data.burritos %}
     {% assign burrito = burrito_hash[1] %}
@@ -13,4 +13,5 @@ title: Menu
         </dd>
     {% endfor %}
     </dl>
+
 </section>
