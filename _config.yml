@@ -1,0 +1,4 @@
+navigation:
+    - { title: Menu, url: index.html }
+    - { title: About Lord Simeon, url: /about/ }
+

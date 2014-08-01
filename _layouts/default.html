@@ -11,7 +11,18 @@
             <i class="under-construction"></i>
             Lord Simeon's World of Cylindrical Sandwiches
         </h1>
-        {{ content }}
+        <div class="body">
+            <nav class="navigation">
+                <ul>
+                {% for link in site.navigation %}
+                    <li class="nav-item {% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}">
+                        <a href="{{ link.url }}"{% if page.title == link.title %} class="current"{% endif %}>{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </nav>
+            {{ content }}
+        </div>
     </div>
 </body>
 </html>
