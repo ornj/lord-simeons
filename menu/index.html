@@ -1,0 +1,17 @@
+---
+title: Menu
+---
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        {% for burrito_hash in site.data.burritos %}
+        {% assign burrito = burrito_hash[1] %}
+            <h1>{{ burrito.name }}</h1>
+            <h2>{{ burrito.price }}</h2>
+            <p>{{ burrito.description }}</p>
+        {% endfor %}
+    </body>
+</html>
+
