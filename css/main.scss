@@ -52,6 +52,16 @@ dd {
     width: 206px;
 }
 
+.lordy{
+    background: url('/img/lord-simeon.jpg') 0 0 no-repeat;
+    background-size: cover;
+    display: block;
+    float: right;
+    margin: 0 10px 0 10px;
+    width: 200px;
+    height: 300px;
+}
+
 .body {
     background: #fff url('/img/tortilla-background.jpg');
     line-height: 1.25;
@@ -63,6 +73,7 @@ dd {
         @include filter(drop-shadow(0 0 1em rgba(0, 0, 0, 1)));
     }
 }
+
 
 .navigation {
     text-align: center;
@@ -116,12 +127,5 @@ dd {
     color: #333;
     font-weight: normal;
     font-size: 0.75em;
-    font-style: italic;;
-}
-
-.our-lord-simeon{
-    background: url('/img/lord_simeon.png') 0 0 no-repeat;
-    display: block;
-    float: left;
-    margin: 10px;
+    font-style: italic;
 }
