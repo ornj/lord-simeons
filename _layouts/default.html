@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Lord Simeon's World of Cylindrical Sandwiches</title>
     <link rel="shortcut icon" href="/img/buttrito-icon.png">
     <link rel="stylesheet" href="/css/main.css">
@@ -25,7 +26,7 @@
             <nav class="navigation">
                 <ul>
                 {% for link in site.navigation %}
-                    <li class="nav-item {% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}">
+                    <li class="nav-item {% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% if page.title == link.title %} current{% endif %}">
                         <a href="{{ link.url }}"{% if page.title == link.title %} class="current"{% endif %}>{{ link.title }}</a>
                     </li>
                 {% endfor %}

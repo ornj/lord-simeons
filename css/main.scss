@@ -46,10 +46,16 @@ dd {
 
 .under-construction {
     background: url('/img/ucon.png') 0 0 no-repeat;
+    background-size: 100%;
     display: block;
     margin: 0 auto 0.5em;
-    height: 169px;
-    width: 206px;
+    height: 84px;
+    width: 103px;
+
+    @include media(large) {
+        height: 169px;
+        width: 206px;
+    }
 }
 
 .body {
@@ -67,32 +73,49 @@ dd {
 .navigation {
     text-align: center;
     padding: 0 0 0.5em;
+
+    ul {
+        padding: 0;
+    }
 }
 
 .nav-item {
     display: inline-block;
+    font-size: 0;
 
     a {
         &:link, &:visited {
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px solid #ccc;
-            color: #000;
-            display: block;
-            padding: 0.5em 1em;
-            text-decoration: none;
-
-            @include border-radius(0.25em);
-            @include filter(drop-shadow(0 0 0.25em rgba(0, 0, 0, 0.1)));
-        }
-        &:hover, &:active {
-            background: #fff;
-            @include filter(drop-shadow(0 0 0.25em rgba(0, 0, 0, 0.25)));
-        }
-
-        &.current {
-            background: #428bca;
+            background: url('/img/bean-bg-middle.png') 0 0 repeat-x;
             color: #fff;
+            display: inline-block;
+            font-size: 16px;
+            height: 41px;
+            line-height: 2.5;
+            text-decoration: none;
+            vertical-align: middle;
         }
+    }
+
+    &:before {
+        background: url('/img/bean-bg-left.png') 0 0 no-repeat;
+        display: inline-block;
+        content: '.';
+        height: 41px;
+        width: 42px;
+        vertical-align: middle;
+    }
+
+    &:after {
+        background: url('/img/bean-bg-right.png') 0 0 no-repeat;
+        display: inline-block;
+        content: '.';
+        height: 41px;
+        width: 38px;
+        vertical-align: middle;
+    }
+
+    &.current {
+        @include filter(drop-shadow(0 0 10px #3F9B30));
     }
 }
 
@@ -104,4 +127,11 @@ dd {
     font-weight: normal;
     font-size: 0.75em;
     font-style: italic;;
+}
+
+.our-lord-simeon{
+    background: url('/img/lord_simeon.png') 0 0 no-repeat;
+    display: block;
+    float: left;
+    margin: 10px;
 }
