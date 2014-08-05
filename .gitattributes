@@ -1,0 +1,2 @@
+# Treat .css files as if they were binary. All .css should be compiled from .scss sources.
+*.css binary
