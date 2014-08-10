@@ -1,0 +1,9 @@
+<nav class="navigation">
+    <ul>
+    {% for item in nav.main %}
+        <li class="nav-item {% if loop.first %}first{% endif %}{% if loop.last %}last{% endif %}{% if item.is_active %} current{% endif %}">
+            <a href="{{ item.url }}"{% if item.is_active %} class="current"{% endif %}>{{ item.label }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</nav>

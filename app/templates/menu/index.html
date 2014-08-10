@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="menu">
+        <p>
+            Our menu is always rotating. Check back regularly for new additions,
+            specials, and coupons or sign up for our free
+            <a href="/mailinglist">mailing list!</a>
+        </p>
+        <dl>
+        {% for item in food_items %}
+            <dt>{{ item.name }}<span class="price">{{ item.price }}</span></dt>
+            <dd>
+                {{ item.description }}
+            </dd>
+        {% else %}
+            <p>No food up in here.</p>
+        {% endfor %}
+        </dl>
+    </section>
+{% endblock %}
+
+

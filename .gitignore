@@ -1,7 +1,5 @@
+app/static/vendor/*
+env/*
 node_modules/*
-vendor/*
 .sass-cache/*
-Gemfile.lock
-
-# Jekyll generated stuff.
-_site/*
+.idea/*

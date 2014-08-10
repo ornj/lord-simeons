@@ -1,0 +1,33 @@
+@import 'variables';
+
+@mixin media($media) {
+    @if $media == small or $media == mobile {
+        @media (max-width: $breakpoint-mobile) { @content; }
+    }
+    @else if $media == medium or $media == tablet {
+        @media (min-width: $breakpoint-mobile) { @content; }
+    }
+    @else if $media == large or $media == desktop {
+        @media (min-width: $breakpoint-desktop) { @content; }
+    }
+    @else if $media == extra-large {
+        @media (min-width: $breakpoint-extra-large) { @content; }
+    }
+    // High pixel density display only
+    @else if $media == highres {
+        @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) { @content; }
+    }
+    // Vertical media queries
+    @else if $media == vertical-small {
+        // ex: Macbook Air 11.6"
+        @media (max-height: $breakpoint-vertical-small) { @content };
+    }
+    @else if $media == vertical-medium {
+        // ex: Macbook Air 13.3"
+        @media (min-height: $breakpoint-vertical-medium) { @content };
+    }
+    @else if $media == vertical-large {
+        // ex:
+        @media (min-height: $breakpoint-vertical-large) { @content };
+    }
+}

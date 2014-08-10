@@ -1,12 +1,9 @@
 module.exports = function(grunt) {
     var config = {
-        base: './',
-        css: 'css',
-        js: 'js'
+        base: './app/static',
+        css: './app/static/css',
+        js: './app/static/js'
     };
-
-    // Callback prevents this from being evaluated
-    var tmpl_compiled = '<%= config.tmpl.compiled %>';
 
     grunt.initConfig({
         config: config,
