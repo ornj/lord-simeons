@@ -3,6 +3,8 @@
 from app import db
 from ..models.food_item import Types, FoodItem
 
+from pprint import pprint
+
 data = [{
     "name": "The Beefeater",
     "description": "Grilled strip steak, cheese, onions, and green bell peppers.",
@@ -79,10 +81,18 @@ burritos = [FoodItem(type=Types.burrito, **item) for item in data]
 
 
 def install(dry_run=False):
-    """Jam burritos into the database's stupid mouth."""
+    """
+    Jam burritos into the database's stupid mouth.
+
+    @todo Should be made repeatable.
+
+    :param dry_run: <bool> If true, no queries will be executed.
+    :return: <list> containing <FoodItem>
+    """
     db.session.add_all(burritos)
     if not dry_run:
         db.session.commit()
-    else :
-        # @todo: Show stuff that would otherwise be commited
-        print 'do nothing'
+        return burritos
+    else:
+        print 'Dry run. Would have created:'
+        pprint(burritos)

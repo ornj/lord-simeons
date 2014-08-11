@@ -9,7 +9,7 @@ manager = Manager(app)
 
 manager.add_command('assets', ManageAssets())
 manager.add_command('db', MigrateCommand)
-manager.add_command('fixture', FixtureCommand(app))
+manager.add_command('fixture', FixtureCommand())
 
 if __name__ == '__main__':
     manager.run()
