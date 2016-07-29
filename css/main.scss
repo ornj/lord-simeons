@@ -8,7 +8,7 @@
 @import '_media-queries';
 
 body {
-    background: url('/img/giphy.gif') 0 0;
+    background: url('img/giphy.gif') 0 0;
     font: 16px/18px sans-serif;
     width: 100%;
 }
@@ -46,7 +46,7 @@ dd {
 }
 
 .under-construction {
-    background: url('/img/ucon.png') 0 0 no-repeat;
+    background: url('img/ucon.png') 0 0 no-repeat;
     background-size: 100%;
     display: block;
     margin: 0 auto 0.5em;
@@ -60,7 +60,7 @@ dd {
 }
 
 .lordy{
-    background: url('/img/lord-simeon.jpg') 0 0 no-repeat;
+    background: url('img/lord-simeon.jpg') 0 0 no-repeat;
     background-size: cover;
     display: block;
     float: right;
@@ -70,7 +70,7 @@ dd {
 }
 
 .body {
-    background: #fff url('/img/tortilla-background.jpg');
+    background: #fff url('img/tortilla-background.jpg');
     line-height: 1.25;
     padding: 1em;
 
@@ -97,7 +97,7 @@ dd {
 
     a {
         &:link, &:visited {
-            background: url('/img/bean-bg-middle.png') 0 0 repeat-x;
+            background: url('img/bean-bg-middle.png') 0 0 repeat-x;
             color: #fff;
             display: inline-block;
             font-size: 16px;
@@ -109,7 +109,7 @@ dd {
     }
 
     &:before {
-        background: url('/img/bean-bg-left.png') 0 0 no-repeat;
+        background: url('img/bean-bg-left.png') 0 0 no-repeat;
         display: inline-block;
         content: '.';
         height: 41px;
@@ -118,7 +118,7 @@ dd {
     }
 
     &:after {
-        background: url('/img/bean-bg-right.png') 0 0 no-repeat;
+        background: url('img/bean-bg-right.png') 0 0 no-repeat;
         display: inline-block;
         content: '.';
         height: 41px;
