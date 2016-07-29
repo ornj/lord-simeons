@@ -1,4 +1,4 @@
 navigation:
-    - { title: Menu, url: /}
-    - { title: About Lord Simeon, url: /about/ }
+    - { title: Menu, url: /lord-simeons}
+    - { title: About Lord Simeon, url: /lord-simeons/about/ }
 
